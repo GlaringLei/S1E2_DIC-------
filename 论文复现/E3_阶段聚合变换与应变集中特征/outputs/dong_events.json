@@ -1,0 +1,67 @@
+{
+ "criterion1_threshold_scan": [
+  {
+   "level": 2,
+   "theta_permil": 1.875,
+   "t_cross_2pct": 152.68
+  },
+  {
+   "level": 3,
+   "theta_permil": 2.812,
+   "t_cross_2pct": 191.68
+  },
+  {
+   "level": 4,
+   "theta_permil": 3.75,
+   "t_cross_2pct": 217.68
+  },
+  {
+   "level": 5,
+   "theta_permil": 4.688,
+   "t_cross_2pct": 239.08
+  },
+  {
+   "level": 6,
+   "theta_permil": 5.625,
+   "t_cross_2pct": 258.08
+  },
+  {
+   "level": 7,
+   "theta_permil": 6.562,
+   "t_cross_2pct": 273.68
+  },
+  {
+   "level": 8,
+   "theta_permil": 7.5,
+   "t_cross_2pct": 286.48
+  },
+  {
+   "level": 9,
+   "theta_permil": 8.438,
+   "t_cross_2pct": 297.48
+  },
+  {
+   "level": 10,
+   "theta_permil": 9.375,
+   "t_cross_2pct": 306.28
+  },
+  {
+   "level": 11,
+   "theta_permil": 10.312,
+   "t_cross_2pct": 314.48
+  },
+  {
+   "level": 12,
+   "theta_permil": 11.25,
+   "t_cross_2pct": 321.48
+  },
+  {
+   "level": 13,
+   "theta_permil": 12.188,
+   "t_cross_2pct": 327.68
+  }
+ ],
+ "criterion2_e2_init_below_2pct_s": 152.08,
+ "criterion2_e2_init_argmin_prepeak_s": 236.88,
+ "note": "判据 1 原文需人工判读'突增'；此处给出各阈值首次 ≥2% 的时刻。判据 2 原文取'最小值'，HS-2 上该占比在约 150 s 后降到 0 并长期保持，argmin 无确定意义，故同时给出'首次 < 2%'。"
+}
