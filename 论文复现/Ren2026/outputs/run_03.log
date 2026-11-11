@@ -1,0 +1,112 @@
+样本：447 秒（剔除不确定）；各阶段 [269, 61, 89, 28]
+
+== A 每个阶段转换上，各模态最强单特征 |2AUC−1| ==
+ transition modality       feature  kind  auc  sep
+   损伤至峰值→峰后       AE   ae_cum_hits trend  1.0  1.0
+   损伤至峰值→峰后      DIC      dic_dmag trend  1.0  1.0
+  起裂前→起裂至损伤       AE   ae_cum_hits trend  1.0  1.0
+  起裂前→起裂至损伤      DIC dic_gmax_lift state  1.0  1.0
+起裂至损伤→损伤至峰值       AE   ae_cum_hits trend  1.0  1.0
+起裂至损伤→损伤至峰值      DIC       dic_eyy trend  1.0  1.0
+
+  各转换上 sep ≥ 0.8 的特征数：
+modality     AE  DIC
+transition          
+损伤至峰值→峰后      1    9
+起裂前→起裂至损伤     4   12
+起裂至损伤→损伤至峰值   6   11
+
+== B 四分类（交叉验证） ==
+clf modality feature_set  n_features  bal_acc  macro_f1  recall_起裂前  recall_起裂至损伤  recall_损伤至峰值  recall_峰后
+ LR       AE          全部          14    0.696     0.666       0.773         0.820         0.764      0.429
+ LR      DIC          全部          17    0.843     0.809       0.840         0.984         0.764      0.786
+ LR   AE+DIC          全部          31    0.806     0.788       0.862         0.836         0.742      0.786
+ LR       AE         去趋势          13    0.639     0.583       0.625         0.787         0.753      0.393
+ LR      DIC         去趋势          13    0.851     0.829       0.855         1.000         0.798      0.750
+ LR   AE+DIC         去趋势          26    0.810     0.806       0.874         0.820         0.798      0.750
+ LR       时间          基线           1    0.840     0.738       0.822         1.000         0.539      1.000
+ RF       AE          全部          14    0.750     0.753       0.933         0.803         0.798      0.464
+ RF      DIC          全部          17    0.827     0.809       0.914         0.820         0.787      0.786
+ RF   AE+DIC          全部          31    0.848     0.818       0.914         0.820         0.764      0.893
+ RF       AE         去趋势          13    0.560     0.536       0.792         0.705         0.742      0.000
+ RF      DIC         去趋势          13    0.834     0.825       0.914         0.803         0.831      0.786
+ RF   AE+DIC         去趋势          26    0.852     0.844       0.914         0.852         0.854      0.786
+ RF       时间          基线           1    0.857     0.823       0.903         0.787         0.809      0.929
+
+== C1 逐秒对错交叉 ==
+clf                     LR     LR     RF     RF
+feature_set             全部    去趋势     全部    去趋势
+both_correct         0.689  0.593  0.792   0.66
+AE_only_correct      0.067  0.065  0.067   0.06
+DIC_only_correct     0.152  0.264  0.076  0.215
+both_wrong           0.092  0.078  0.065  0.065
+oracle_acc           0.908  0.922  0.935  0.935
+joint_acc             0.83  0.843   0.87  0.886
+AE_acc               0.756  0.658  0.859   0.72
+DIC_acc              0.841  0.857  0.868  0.875
+mcnemar_AE_vs_DIC_p    0.0    0.0  0.708    0.0
+AE错DIC对_起裂前          0.104  0.271  0.015  0.164
+DIC错AE对_起裂前          0.037  0.041  0.033  0.041
+AE错DIC对_起裂至损伤         0.18  0.213  0.082   0.18
+DIC错AE对_起裂至损伤        0.016    0.0  0.066  0.082
+AE错DIC对_损伤至峰值        0.157   0.18  0.112  0.213
+DIC错AE对_损伤至峰值        0.157  0.135  0.124  0.124
+AE错DIC对_峰后           0.536  0.571  0.536  0.786
+DIC错AE对_峰后           0.179  0.214  0.214    0.0
+
+== C2 联合增益（平衡准确率差，块 bootstrap 95% CI） ==
+clf feature_set   comparison   diff  ci_low  ci_high
+ LR          全部  AE+DIC − AE  0.110  -0.171    0.203
+ LR          全部 AE+DIC − DIC -0.037  -0.144    0.030
+ LR         去趋势  AE+DIC − AE  0.171  -0.195    0.259
+ LR         去趋势 AE+DIC − DIC -0.040  -0.162    0.030
+ RF          全部  AE+DIC − AE  0.098  -0.245    0.212
+ RF          全部 AE+DIC − DIC  0.021  -0.008    0.100
+ RF         去趋势  AE+DIC − AE  0.292   0.072    0.385
+ RF         去趋势 AE+DIC − DIC  0.018   0.000    0.058
+
+== C3 相邻阶段二分类 AUC（RF / LR） ==
+clf                         LR                          RF                     
+modality                    AE AE+DIC    DIC     时间     AE AE+DIC    DIC     时间
+transition  feature_set                                                        
+损伤至峰值→峰后    全部           0.856  0.957  0.925    NaN  0.898  0.985  0.979    NaN
+            去趋势          0.491  0.945  0.913    NaN  0.516  0.981  0.983    NaN
+            基线             NaN    NaN    NaN  0.981    NaN    NaN    NaN  0.955
+起裂前→起裂至损伤   全部           0.952  0.977  0.980    NaN  0.957  0.977  0.979    NaN
+            去趋势          0.947  0.976  0.979    NaN  0.954  0.978  0.983    NaN
+            基线             NaN    NaN    NaN  0.975    NaN    NaN    NaN  0.918
+起裂至损伤→损伤至峰值 全部           0.909  0.921  0.973    NaN  0.975  0.975  0.978    NaN
+            去趋势          0.855  0.921  0.952    NaN  0.945  0.978  0.976    NaN
+            基线             NaN    NaN    NaN  0.979    NaN    NaN    NaN  0.933
+
+== C4 AE–DIC 冗余度 ==
+  |ρ| 中位数：原始 0.32，阶段内 0.19；|ρ|>0.8 的特征对：原始 37，阶段内 4 / 238
+
+== D 无监督 KMeans(4) ARI ==
+modality feature_set  n_features  pcs  ARI_mean  ARI_std
+      AE          全部          14    5     0.247    0.000
+     DIC          全部          17    5     0.661    0.147
+  AE+DIC          全部          31    8     0.273    0.000
+      AE         去趋势          13    5     0.248    0.000
+     DIC         去趋势          13    5     0.300    0.000
+  AE+DIC         去趋势          26    9     0.260    0.048
+      时间          基线           1    1     0.386    0.002
+
+== 敏感性：W = 10 s ==
+modality feature_set  bal_acc  macro_f1
+      AE          全部    0.667     0.648
+     DIC          全部    0.784     0.782
+  AE+DIC          全部    0.788     0.784
+      AE         去趋势    0.669     0.641
+     DIC         去趋势    0.803     0.818
+  AE+DIC         去趋势    0.804     0.820
+      时间          基线    0.834     0.808
+clf feature_set   comparison  diff  ci_low  ci_high
+ LR          全部  AE+DIC − AE 0.136  -0.001    0.204
+ LR          全部 AE+DIC − DIC 0.001  -0.062    0.061
+ LR         去趋势  AE+DIC − AE 0.145   0.027    0.194
+ LR         去趋势 AE+DIC − DIC 0.001  -0.099    0.074
+ RF          全部  AE+DIC − AE 0.121  -0.067    0.188
+ RF          全部 AE+DIC − DIC 0.005  -0.016    0.023
+ RF         去趋势  AE+DIC − AE 0.135  -0.066    0.214
+ RF         去趋势 AE+DIC − DIC 0.001   0.000    0.003

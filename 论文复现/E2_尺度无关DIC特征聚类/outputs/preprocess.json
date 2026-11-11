@@ -1,0 +1,607 @@
+{
+ "W_s": 5,
+ "ae_shear_share_causal": 0.518161556532739,
+ "n_samples": 458,
+ "n_certain": 447,
+ "sets": {
+  "AE_全部": {
+   "n_features": 14,
+   "n_pcs": 5,
+   "explained": [
+    0.3567,
+    0.2842,
+    0.1345,
+    0.0938,
+    0.0494
+   ],
+   "top_PC1": {
+    "ae_RA_med": 0.503,
+    "ae_dur_med": 0.469,
+    "ae_amp_med": 0.417,
+    "ae_AF_med": 0.367,
+    "ae_shear_frac": 0.365
+   },
+   "top_PC2": {
+    "ae_ring_rate": 0.433,
+    "ae_energy_rate": 0.381,
+    "ae_cum_hits": 0.356,
+    "ae_shear_rate": 0.35,
+    "ae_rate": 0.336
+   },
+   "features": {
+    "ae_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.8213788864092133,
+     "scale": 1.6560104709089911,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_ring_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 4.107589788972121,
+     "scale": 1.58604226942897,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_energy_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.821441627196908,
+     "scale": 1.7921201546754149,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.9740810260220096,
+     "scale": 1.3092281032976902,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_tensile_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.341805806147327,
+     "scale": 1.5947422878709177,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_frac": {
+     "nan_frac": 0.17248908296943233,
+     "center": 0.44660194174757284,
+     "scale": 0.09441055504553676,
+     "scale_from": "IQR",
+     "clipped_frac": 0.006550218340611353
+    },
+    "ae_RA_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": -4.90952377266508,
+     "scale": 0.4113144898840194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.019650655021834062
+    },
+    "ae_AF_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 5.55975515004951,
+     "scale": 0.5511526644932835,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "ae_amp_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 105.59,
+     "scale": 7.889177168272804,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_dur_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 9.33,
+     "scale": 9.605263157894738,
+     "scale_from": "IQR",
+     "clipped_frac": 0.06768558951965066
+    },
+    "ae_zero_frac": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.2965159377316531,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_rate_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0,
+     "scale": 0.1576967601413641,
+     "scale_from": "IQR",
+     "clipped_frac": 0.056768558951965066
+    },
+    "ae_rate_cv": {
+     "nan_frac": 0.09606986899563319,
+     "center": 0.5023041961747909,
+     "scale": 0.5182955924468594,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_cum_hits": {
+     "nan_frac": 0.0,
+     "center": 7.396943903635224,
+     "scale": 2.6234501871761284,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    }
+   }
+  },
+  "AE_去趋势": {
+   "n_features": 13,
+   "n_pcs": 5,
+   "explained": [
+    0.3725,
+    0.2608,
+    0.1409,
+    0.0979,
+    0.0513
+   ],
+   "top_PC1": {
+    "ae_RA_med": 0.515,
+    "ae_dur_med": 0.478,
+    "ae_amp_med": 0.419,
+    "ae_AF_med": 0.372,
+    "ae_shear_frac": 0.369
+   },
+   "top_PC2": {
+    "ae_ring_rate": 0.471,
+    "ae_energy_rate": 0.419,
+    "ae_shear_rate": 0.382,
+    "ae_rate": 0.364,
+    "ae_zero_frac": 0.347
+   },
+   "features": {
+    "ae_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.8213788864092133,
+     "scale": 1.6560104709089911,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_ring_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 4.107589788972121,
+     "scale": 1.58604226942897,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_energy_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.821441627196908,
+     "scale": 1.7921201546754149,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.9740810260220096,
+     "scale": 1.3092281032976902,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_tensile_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.341805806147327,
+     "scale": 1.5947422878709177,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_frac": {
+     "nan_frac": 0.17248908296943233,
+     "center": 0.44660194174757284,
+     "scale": 0.09441055504553676,
+     "scale_from": "IQR",
+     "clipped_frac": 0.006550218340611353
+    },
+    "ae_RA_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": -4.90952377266508,
+     "scale": 0.4113144898840194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.019650655021834062
+    },
+    "ae_AF_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 5.55975515004951,
+     "scale": 0.5511526644932835,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "ae_amp_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 105.59,
+     "scale": 7.889177168272804,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_dur_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 9.33,
+     "scale": 9.605263157894738,
+     "scale_from": "IQR",
+     "clipped_frac": 0.06768558951965066
+    },
+    "ae_zero_frac": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.2965159377316531,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_rate_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0,
+     "scale": 0.1576967601413641,
+     "scale_from": "IQR",
+     "clipped_frac": 0.056768558951965066
+    },
+    "ae_rate_cv": {
+     "nan_frac": 0.09606986899563319,
+     "center": 0.5023041961747909,
+     "scale": 0.5182955924468594,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    }
+   }
+  },
+  "DIC_全部": {
+   "n_features": 20,
+   "n_pcs": 4,
+   "explained": [
+    0.6757,
+    0.1215,
+    0.072,
+    0.0579
+   ],
+   "top_PC1": {
+    "inc_P4": 0.416,
+    "inc_top5": 0.402,
+    "sf_P8": 0.371,
+    "inc_q98": 0.364,
+    "inc_P2": 0.296
+   },
+   "top_PC2": {
+    "acc_log": 0.884,
+    "q98_slope": 0.306,
+    "sf_P8": 0.145,
+    "sf_P4": 0.136,
+    "inc_nu": 0.129
+   },
+   "features": {
+    "sf_Plow": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.08550759878419453,
+     "scale": 0.06719122123558821,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_P2": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.07030851063829786,
+     "scale": 0.07924506726811034,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_P4": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.002890577507598784,
+     "scale": 0.018440429812920073,
+     "scale_from": "IQR",
+     "clipped_frac": 0.024017467248908297
+    },
+    "sf_P8": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.0017008546238235689,
+     "scale_from": "IQR",
+     "clipped_frac": 0.13100436681222707
+    },
+    "sf_q98": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.4130565721286727,
+     "scale": 0.6699150240237707,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_top5": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.12530333895670503,
+     "scale": 0.05254507843777588,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_gini": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.29899372385782724,
+     "scale": 0.09934639515260665,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_e2low": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.06698936170212766,
+     "scale": 0.14608338722142486,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_tens": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.16416717325227964,
+     "scale": 0.2858316971004652,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_nu": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.39887851616650094,
+     "scale": 0.32352951913446004,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_band": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.6818251255076554,
+     "scale": 0.7410198877889271,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_crack": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.03679649352964122,
+     "scale_from": "std",
+     "clipped_frac": 0.017467248908296942
+    },
+    "inc_P2": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.07248632218844984,
+     "scale": 0.05801466131616125,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "inc_P4": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.0004635258358662613,
+     "scale": 0.017183729476523194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.1572052401746725
+    },
+    "inc_q98": {
+     "nan_frac": 0.010917030567685589,
+     "center": 1.3250666716136699,
+     "scale": 0.62235151512396,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03711790393013101
+    },
+    "inc_top5": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.11711927969160937,
+     "scale": 0.04452762960208188,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10698689956331878
+    },
+    "inc_nu": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.5882462315946919,
+     "scale": 0.8257462222834379,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "inc_corr": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.2407568571326693,
+     "scale": 0.2998347520568454,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "acc_log": {
+     "nan_frac": 0.021834061135371178,
+     "center": 0.011299315211748309,
+     "scale": 0.0374052638604966,
+     "scale_from": "IQR",
+     "clipped_frac": 0.09606986899563319
+    },
+    "q98_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0005179272884956343,
+     "scale": 0.009992190616664696,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    }
+   }
+  },
+  "DIC_累积场": {
+   "n_features": 12,
+   "n_pcs": 3,
+   "explained": [
+    0.7668,
+    0.1062,
+    0.0648
+   ],
+   "top_PC1": {
+    "sf_P8": 0.581,
+    "sf_P4": 0.462,
+    "sf_q98": 0.291,
+    "sf_nu": 0.274,
+    "sf_top5": 0.27
+   },
+   "top_PC2": {
+    "sf_Plow": 0.607,
+    "sf_e2low": 0.528,
+    "sf_band": 0.276,
+    "sf_gini": 0.264,
+    "sf_P8": 0.257
+   },
+   "features": {
+    "sf_Plow": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.08550759878419453,
+     "scale": 0.06719122123558821,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_P2": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.07030851063829786,
+     "scale": 0.07924506726811034,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_P4": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.002890577507598784,
+     "scale": 0.018440429812920073,
+     "scale_from": "IQR",
+     "clipped_frac": 0.024017467248908297
+    },
+    "sf_P8": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.0017008546238235689,
+     "scale_from": "IQR",
+     "clipped_frac": 0.13100436681222707
+    },
+    "sf_q98": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.4130565721286727,
+     "scale": 0.6699150240237707,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_top5": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.12530333895670503,
+     "scale": 0.05254507843777588,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_gini": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.29899372385782724,
+     "scale": 0.09934639515260665,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_e2low": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.06698936170212766,
+     "scale": 0.14608338722142486,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_tens": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.16416717325227964,
+     "scale": 0.2858316971004652,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_nu": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.39887851616650094,
+     "scale": 0.32352951913446004,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_band": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.6818251255076554,
+     "scale": 0.7410198877889271,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "sf_crack": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.03679649352964122,
+     "scale_from": "std",
+     "clipped_frac": 0.017467248908296942
+    }
+   }
+  },
+  "DIC_增量动态": {
+   "n_features": 8,
+   "n_pcs": 3,
+   "explained": [
+    0.6924,
+    0.182,
+    0.0866
+   ],
+   "top_PC1": {
+    "inc_P4": 0.532,
+    "inc_top5": 0.512,
+    "inc_q98": 0.463,
+    "inc_P2": 0.372,
+    "inc_corr": 0.196
+   },
+   "top_PC2": {
+    "acc_log": 0.953,
+    "q98_slope": 0.239,
+    "inc_P4": 0.114,
+    "inc_top5": 0.101,
+    "inc_q98": 0.088
+   },
+   "features": {
+    "inc_P2": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.07248632218844984,
+     "scale": 0.05801466131616125,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "inc_P4": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.0004635258358662613,
+     "scale": 0.017183729476523194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.1572052401746725
+    },
+    "inc_q98": {
+     "nan_frac": 0.010917030567685589,
+     "center": 1.3250666716136699,
+     "scale": 0.62235151512396,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03711790393013101
+    },
+    "inc_top5": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.11711927969160937,
+     "scale": 0.04452762960208188,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10698689956331878
+    },
+    "inc_nu": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.5882462315946919,
+     "scale": 0.8257462222834379,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "inc_corr": {
+     "nan_frac": 0.010917030567685589,
+     "center": 0.2407568571326693,
+     "scale": 0.2998347520568454,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "acc_log": {
+     "nan_frac": 0.021834061135371178,
+     "center": 0.011299315211748309,
+     "scale": 0.0374052638604966,
+     "scale_from": "IQR",
+     "clipped_frac": 0.09606986899563319
+    },
+    "q98_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0005179272884956343,
+     "scale": 0.009992190616664696,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    }
+   }
+  }
+ }
+}

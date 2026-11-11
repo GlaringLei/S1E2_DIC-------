@@ -1,0 +1,579 @@
+{
+ "W_s": 5,
+ "pca_var": 0.9,
+ "clip": 5.0,
+ "n_samples": 458,
+ "n_certain": 447,
+ "sets": {
+  "AE_全部": {
+   "n_features": 14,
+   "kept": [
+    "ae_rate",
+    "ae_ring_rate",
+    "ae_energy_rate",
+    "ae_shear_rate",
+    "ae_tensile_rate",
+    "ae_shear_frac",
+    "ae_RA_med",
+    "ae_AF_med",
+    "ae_amp_med",
+    "ae_dur_med",
+    "ae_zero_frac",
+    "ae_rate_slope",
+    "ae_rate_cv",
+    "ae_cum_hits"
+   ],
+   "n_pcs": 5,
+   "explained": [
+    0.3773,
+    0.2791,
+    0.1314,
+    0.0751,
+    0.0606
+   ],
+   "top_PC1": {
+    "ae_RA_med": 0.497,
+    "ae_dur_med": 0.474,
+    "ae_shear_frac": 0.443,
+    "ae_amp_med": 0.396,
+    "ae_AF_med": 0.364
+   },
+   "top_PC2": {
+    "ae_ring_rate": 0.448,
+    "ae_energy_rate": 0.401,
+    "ae_cum_hits": 0.363,
+    "ae_rate": 0.345,
+    "ae_shear_rate": 0.337
+   },
+   "features": {
+    "ae_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.8213788864092133,
+     "scale": 1.6560104709089911,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_ring_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 4.107589788972121,
+     "scale": 1.58604226942897,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_energy_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.821441627196908,
+     "scale": 1.7921201546754149,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.5260563034950492,
+     "scale": 1.1224075112155492,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_tensile_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.533696813957432,
+     "scale": 1.7194493322338216,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_frac": {
+     "nan_frac": 0.17248908296943233,
+     "center": 0.22453703703703703,
+     "scale": 0.07298671557003901,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_RA_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": -4.90952377266508,
+     "scale": 0.4113144898840194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.019650655021834062
+    },
+    "ae_AF_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 5.55975515004951,
+     "scale": 0.5511526644932835,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "ae_amp_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 105.59,
+     "scale": 7.889177168272804,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_dur_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 9.33,
+     "scale": 9.605263157894738,
+     "scale_from": "IQR",
+     "clipped_frac": 0.06768558951965066
+    },
+    "ae_zero_frac": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.2965159377316531,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_rate_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0,
+     "scale": 0.1576967601413641,
+     "scale_from": "IQR",
+     "clipped_frac": 0.056768558951965066
+    },
+    "ae_rate_cv": {
+     "nan_frac": 0.09606986899563319,
+     "center": 0.5023041961747909,
+     "scale": 0.5182955924468594,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_cum_hits": {
+     "nan_frac": 0.0,
+     "center": 7.396943903635224,
+     "scale": 2.6234501871761284,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    }
+   }
+  },
+  "AE_去趋势": {
+   "n_features": 13,
+   "kept": [
+    "ae_rate",
+    "ae_ring_rate",
+    "ae_energy_rate",
+    "ae_shear_rate",
+    "ae_tensile_rate",
+    "ae_shear_frac",
+    "ae_RA_med",
+    "ae_AF_med",
+    "ae_amp_med",
+    "ae_dur_med",
+    "ae_zero_frac",
+    "ae_rate_slope",
+    "ae_rate_cv"
+   ],
+   "n_pcs": 5,
+   "explained": [
+    0.3947,
+    0.2549,
+    0.1374,
+    0.0782,
+    0.0627
+   ],
+   "top_PC1": {
+    "ae_RA_med": 0.5,
+    "ae_dur_med": 0.476,
+    "ae_shear_frac": 0.445,
+    "ae_amp_med": 0.395,
+    "ae_AF_med": 0.365
+   },
+   "top_PC2": {
+    "ae_ring_rate": 0.48,
+    "ae_energy_rate": 0.432,
+    "ae_rate": 0.369,
+    "ae_shear_rate": 0.364,
+    "ae_zero_frac": 0.348
+   },
+   "features": {
+    "ae_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.8213788864092133,
+     "scale": 1.6560104709089911,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_ring_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 4.107589788972121,
+     "scale": 1.58604226942897,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_energy_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.821441627196908,
+     "scale": 1.7921201546754149,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.5260563034950492,
+     "scale": 1.1224075112155492,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_tensile_rate": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.533696813957432,
+     "scale": 1.7194493322338216,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_shear_frac": {
+     "nan_frac": 0.17248908296943233,
+     "center": 0.22453703703703703,
+     "scale": 0.07298671557003901,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_RA_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": -4.90952377266508,
+     "scale": 0.4113144898840194,
+     "scale_from": "IQR",
+     "clipped_frac": 0.019650655021834062
+    },
+    "ae_AF_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 5.55975515004951,
+     "scale": 0.5511526644932835,
+     "scale_from": "IQR",
+     "clipped_frac": 0.002183406113537118
+    },
+    "ae_amp_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 105.59,
+     "scale": 7.889177168272804,
+     "scale_from": "IQR",
+     "clipped_frac": 0.03056768558951965
+    },
+    "ae_dur_med": {
+     "nan_frac": 0.09606986899563319,
+     "center": 9.33,
+     "scale": 9.605263157894738,
+     "scale_from": "IQR",
+     "clipped_frac": 0.06768558951965066
+    },
+    "ae_zero_frac": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 0.2965159377316531,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "ae_rate_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0,
+     "scale": 0.1576967601413641,
+     "scale_from": "IQR",
+     "clipped_frac": 0.056768558951965066
+    },
+    "ae_rate_cv": {
+     "nan_frac": 0.09606986899563319,
+     "center": 0.5023041961747909,
+     "scale": 0.5182955924468594,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    }
+   }
+  },
+  "DIC_全部": {
+   "n_features": 17,
+   "kept": [
+    "dic_dn",
+    "dic_ds",
+    "dic_dmag",
+    "dic_dn_rate",
+    "dic_ds_rate",
+    "dic_dmag_rate",
+    "dic_acc_ratio",
+    "dic_section_cv",
+    "dic_U",
+    "dic_tau",
+    "dic_U_slope",
+    "dic_tau_slope",
+    "dic_gmax_p50",
+    "dic_gmax_lift",
+    "dic_gmax_lift_slope",
+    "dic_eyy",
+    "dic_crack"
+   ],
+   "n_pcs": 4,
+   "explained": [
+    0.7333,
+    0.0949,
+    0.0502,
+    0.0441
+   ],
+   "top_PC1": {
+    "dic_ds_rate": 0.35,
+    "dic_ds": 0.347,
+    "dic_gmax_lift": 0.343,
+    "dic_dmag": 0.339,
+    "dic_dn": 0.338
+   },
+   "top_PC2": {
+    "dic_tau_slope": 0.787,
+    "dic_dn_rate": 0.388,
+    "dic_U_slope": 0.263,
+    "dic_gmax_lift_slope": 0.219,
+    "dic_acc_ratio": 0.204
+   },
+   "features": {
+    "dic_dn": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.259616223969766,
+     "scale": 27.697793092499094,
+     "scale_from": "IQR",
+     "clipped_frac": 0.19213973799126638
+    },
+    "dic_ds": {
+     "nan_frac": 0.002183406113537118,
+     "center": 3.3766147811085006,
+     "scale": 11.299092246851849,
+     "scale_from": "IQR",
+     "clipped_frac": 0.19868995633187772
+    },
+    "dic_dmag": {
+     "nan_frac": 0.002183406113537118,
+     "center": 5.13383404921714,
+     "scale": 28.944680388966997,
+     "scale_from": "IQR",
+     "clipped_frac": 0.1943231441048035
+    },
+    "dic_dn_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.10165302222649933,
+     "scale": 0.5014921837430402,
+     "scale_from": "IQR",
+     "clipped_frac": 0.15065502183406113
+    },
+    "dic_ds_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.042076487643499555,
+     "scale": 0.37110882472427303,
+     "scale_from": "IQR",
+     "clipped_frac": 0.2096069868995633
+    },
+    "dic_dmag_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.09250435496137505,
+     "scale": 0.7397313578677934,
+     "scale_from": "IQR",
+     "clipped_frac": 0.16375545851528384
+    },
+    "dic_acc_ratio": {
+     "nan_frac": 0.039301310043668124,
+     "center": 0.29651462620052216,
+     "scale": 0.4029054455011418,
+     "scale_from": "IQR",
+     "clipped_frac": 0.010917030567685589
+    },
+    "dic_section_cv": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.2166585484874155,
+     "scale": 0.1745584317170974,
+     "scale_from": "IQR",
+     "clipped_frac": 0.004366812227074236
+    },
+    "dic_U": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0015833014377013195,
+     "scale": 0.004185764682788223,
+     "scale_from": "IQR",
+     "clipped_frac": 0.05240174672489083
+    },
+    "dic_tau": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.12985206149518191,
+     "scale": 0.21883658550552604,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "dic_U_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 2.127463773350765e-05,
+     "scale": 3.5523804197661574e-05,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10480349344978165
+    },
+    "dic_tau_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0014268352085873264,
+     "scale": 0.0013668673082351138,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10043668122270742
+    },
+    "dic_gmax_p50": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.9595983996986603,
+     "scale": 2.632651840091701,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "dic_gmax_lift": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.4092787881380802,
+     "scale": 2.6364386385419536,
+     "scale_from": "IQR",
+     "clipped_frac": 0.18777292576419213
+    },
+    "dic_gmax_lift_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.012194834576794999,
+     "scale": 0.0250911132528781,
+     "scale_from": "IQR",
+     "clipped_frac": 0.12663755458515283
+    },
+    "dic_eyy": {
+     "nan_frac": 0.002183406113537118,
+     "center": 2.93321261182418,
+     "scale": 3.1693967348696637,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "dic_crack": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 3.679649352964119,
+     "scale_from": "std",
+     "clipped_frac": 0.017467248908296942
+    }
+   }
+  },
+  "DIC_去趋势": {
+   "n_features": 13,
+   "kept": [
+    "dic_dn_rate",
+    "dic_ds_rate",
+    "dic_dmag_rate",
+    "dic_acc_ratio",
+    "dic_section_cv",
+    "dic_U",
+    "dic_tau",
+    "dic_U_slope",
+    "dic_tau_slope",
+    "dic_gmax_p50",
+    "dic_gmax_lift",
+    "dic_gmax_lift_slope",
+    "dic_crack"
+   ],
+   "n_pcs": 4,
+   "explained": [
+    0.6501,
+    0.1298,
+    0.0647,
+    0.0599
+   ],
+   "top_PC1": {
+    "dic_ds_rate": 0.432,
+    "dic_gmax_lift": 0.42,
+    "dic_dmag_rate": 0.416,
+    "dic_dn_rate": 0.344,
+    "dic_U_slope": 0.317
+   },
+   "top_PC2": {
+    "dic_tau_slope": 0.796,
+    "dic_dn_rate": 0.373,
+    "dic_U_slope": 0.279,
+    "dic_gmax_lift_slope": 0.199,
+    "dic_acc_ratio": 0.192
+   },
+   "features": {
+    "dic_dn_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.10165302222649933,
+     "scale": 0.5014921837430402,
+     "scale_from": "IQR",
+     "clipped_frac": 0.15065502183406113
+    },
+    "dic_ds_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.042076487643499555,
+     "scale": 0.37110882472427303,
+     "scale_from": "IQR",
+     "clipped_frac": 0.2096069868995633
+    },
+    "dic_dmag_rate": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.09250435496137505,
+     "scale": 0.7397313578677934,
+     "scale_from": "IQR",
+     "clipped_frac": 0.16375545851528384
+    },
+    "dic_acc_ratio": {
+     "nan_frac": 0.039301310043668124,
+     "center": 0.29651462620052216,
+     "scale": 0.4029054455011418,
+     "scale_from": "IQR",
+     "clipped_frac": 0.010917030567685589
+    },
+    "dic_section_cv": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.2166585484874155,
+     "scale": 0.1745584317170974,
+     "scale_from": "IQR",
+     "clipped_frac": 0.004366812227074236
+    },
+    "dic_U": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0015833014377013195,
+     "scale": 0.004185764682788223,
+     "scale_from": "IQR",
+     "clipped_frac": 0.05240174672489083
+    },
+    "dic_tau": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.12985206149518191,
+     "scale": 0.21883658550552604,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "dic_U_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 2.127463773350765e-05,
+     "scale": 3.5523804197661574e-05,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10480349344978165
+    },
+    "dic_tau_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.0014268352085873264,
+     "scale": 0.0013668673082351138,
+     "scale_from": "IQR",
+     "clipped_frac": 0.10043668122270742
+    },
+    "dic_gmax_p50": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.9595983996986603,
+     "scale": 2.632651840091701,
+     "scale_from": "IQR",
+     "clipped_frac": 0.0
+    },
+    "dic_gmax_lift": {
+     "nan_frac": 0.002183406113537118,
+     "center": 1.4092787881380802,
+     "scale": 2.6364386385419536,
+     "scale_from": "IQR",
+     "clipped_frac": 0.18777292576419213
+    },
+    "dic_gmax_lift_slope": {
+     "nan_frac": 0.008733624454148471,
+     "center": 0.012194834576794999,
+     "scale": 0.0250911132528781,
+     "scale_from": "IQR",
+     "clipped_frac": 0.12663755458515283
+    },
+    "dic_crack": {
+     "nan_frac": 0.002183406113537118,
+     "center": 0.0,
+     "scale": 3.679649352964119,
+     "scale_from": "std",
+     "clipped_frac": 0.017467248908296942
+    }
+   }
+  }
+ }
+}

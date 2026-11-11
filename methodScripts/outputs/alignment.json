@@ -1,0 +1,67 @@
+{
+  "t0_s": -0.7200000000001978,
+  "rule": "t_s = t0 + frame/5；frame 为文件编号 HS-2-XXXX",
+  "t0_method": "最大化 Δ载荷 与 Δ虚拟引伸计 的相关，扫描 t0∈[-10,10] s，步长 0.02 s",
+  "t0_scan_top5": [
+    [
+      -0.7200000000001978,
+      0.4266805167680313
+    ],
+    [
+      -0.7400000000001974,
+      0.4263202332693141
+    ],
+    [
+      -0.7000000000001982,
+      0.4232476632274063
+    ],
+    [
+      -0.760000000000197,
+      0.4221078903353038
+    ],
+    [
+      -0.6800000000001987,
+      0.4204012728021959
+    ]
+  ],
+  "check_first_mass_mismatch_frame": 2168,
+  "check_first_mass_mismatch_time_s": 432.8799999999998,
+  "load_peak_time_s": 427.3,
+  "boundaries_s": {
+    "t_ci": 270.0,
+    "t_cd": 334.0,
+    "t_peak": 427.3,
+    "peak_uncertain": [
+      424.6,
+      429.5
+    ],
+    "stage_ranges_from_labels": {
+      "damage_to_peak": [
+        334.0,
+        425.0
+      ],
+      "initiation_to_damage": [
+        270.0,
+        333.0
+      ],
+      "post_peak": [
+        428.0,
+        457.0
+      ],
+      "pre_initiation": [
+        36.0,
+        269.0
+      ]
+    }
+  },
+  "label_clock": "标注表 mechanics_time_s = AE 到达时间 − 40 s，按整秒给出，边界精度 ±1 s",
+  "frames_per_stage": {
+    "pre_initiation": 1350,
+    "damage_to_peak": 467,
+    "initiation_to_damage": 320,
+    "post_peak": 150,
+    "after_end": 9,
+    "before_start": 4
+  },
+  "frames_uncertain": 45
+}
